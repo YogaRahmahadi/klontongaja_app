@@ -3,11 +3,6 @@
 <section class="py-6 pb-9 bg-default">
 <div class="bg-danger text-white">
    <div class="row justify-content-center text-center">
-     <div class="col-md-6">
-       <p class="display-4 text-white"></p>
-         <p class="lead text-mint"></p>
-       </div>
-     </div>
   </section>
 	<!-- BEGIN PAGE LEVEL STYLES -->
 	<link href="https://portal.polinema.ac.id/assets/css/login-2.min.css" rel="stylesheet" type="text/css" />
@@ -59,9 +54,9 @@
             </div>
         </form>
     </div>
-    
+
     <!-- /.login-box-body -->
-    
+
 </div>
 
 @endsection
