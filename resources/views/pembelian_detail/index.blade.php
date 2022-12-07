@@ -57,7 +57,7 @@
                 </table>
             </div>
             <div class="box-body">
-                    
+
                 <form class="form-produk">
                     @csrf
                     <div class="form-group row">
@@ -88,10 +88,6 @@
                 </table>
 
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="tampil-bayar bg-primary"></div>
-                        <div class="tampil-terbilang"></div>
-                    </div>
                     <div class="col-lg-4">
                         <form action="{{ route('pembelian.store') }}" class="form-pembelian" method="post">
                             @csrf
@@ -109,7 +105,7 @@
                             <div class="form-group row">
                                 <label for="diskon" class="col-lg-2 control-label">Diskon</label>
                                 <div class="col-lg-8">
-                                    <input type="number" name="diskon" id="diskon" class="form-control" value="{{ $diskon }}">
+                                    <input type="number" name="diskon" id="diskon" class="form-control readonly" value="{{ $diskon }}">
                                 </div>
                             </div>
                             <div class="form-group row">

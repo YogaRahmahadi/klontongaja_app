@@ -48,7 +48,6 @@ class PenjualanController extends Controller
             ->addColumn('aksi', function ($penjualan) {
                 return '
                 <div class="btn-group">
-                    <a onclick="editForm(`' . route('penjualan.show', $penjualan->id_penjualan) . '`)" style="background-color: #548CFF" class="float-end btn btn-success text-light">Edit Data</a>
                     <a onclick="deleteData(`' . route('penjualan.destroy', $penjualan->id_penjualan) . '`)" style="background-color: #F32424" class="float-end btn btn-success text-light">Delete</a>
                 </div>
                 ';
@@ -177,5 +176,14 @@ class PenjualanController extends Controller
         $pdf = PDF::loadView('penjualan.nota_besar', compact('setting', 'penjualan', 'detail'));
         $pdf->setPaper(0, 0, 609, 440, 'potrait');
         return $pdf->stream('Transaksi-' . date('Y-m-d-his') . '.pdf');
+    }
+
+    public function exportPDF($awal, $akhir)
+    {
+        $data = $this->getData($awal, $akhir);
+        $pdf  = PDF::loadView('laporan.pdf', compact('awal', 'akhir', 'data'));
+        $pdf->setPaper('a4', 'potrait');
+
+        return $pdf->stream('Laporan-pendapatan-' . date('Y-m-d-his') . '.pdf');
     }
 }

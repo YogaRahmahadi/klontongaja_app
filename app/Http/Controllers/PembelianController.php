@@ -45,7 +45,6 @@ class PembelianController extends Controller
             ->addColumn('aksi', function ($pembelian) {
                 return '
                 <div class="btn-group">
-                    <a onclick="editForm(`' . route('pembelian.show', $pembelian->id_pembelian) . '`)" style="background-color: #548CFF" class="float-end btn btn-success text-light">Edit Data</a>
                     <a onclick="deleteData(`' . route('pembelian.destroy', $pembelian->id_pembelian) . '`)" style="background-color: #F32424" class="float-end btn btn-success text-light">Delete</a>
                 </div>
                 ';

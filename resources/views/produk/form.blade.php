@@ -54,22 +54,22 @@
                     <div class="form-group row">
                         <label for="stok" class="col-lg-2 col-lg-offset-1 control-label">Stok</label>
                         <div class="col-lg-6">
-                            <input type="number" name="stok" id="stok" class="form-control" required value="0">
+                            <input type="number" name="stok" id="stok" class="form-control" required>
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="foto" class="col-lg-2 control-label">Foto</label>
-                        <div class="col-lg-4">
-                            <input type="file" name="foto" class="form-control" id="foto"
-                                onchange="preview('.tampil-foto', this.files[0])">
+                        <label for="satuan" class="col-lg-2 col-lg-offset-1 control-label">Satuan</label>
+                        <div class="col-lg-6">
+                            <input type="text" name="satuan" id="satuan" class="form-control" required>
+                            <span class="help-block with-errors"></span>
                         </div>
                     </div>
                     {{-- <div class="form-group row">
-                        <label for="stok" class="col-lg-2 col-lg-offset-1 control-label">Satuan</label>
+                        <label for="foto" class="col-lg-2 col-lg-offset-1 control-label">Foto</label>
                         <div class="col-lg-6">
-                            <input type="text" name="satuan" id="satuan" class="form-control" required value="Sak">
-                            <span class="help-block with-errors"></span>
+                            <input type="file" name="foto" class="form-control" id="foto"
+                                onchange="preview('.tampil-foto', this.files[0])">
                         </div>
                     </div> --}}
                     {{-- <div class="form-group">
@@ -78,7 +78,7 @@
                     </div> --}}
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan</button>
+                    <button type="submit" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan</button>
                     <button type="button" class="btn btn-sm btn-flat btn-warning" data-dismiss="modal"><i class="fa fa-arrow-circle-left"></i> Batal</button>
                 </div>
             </div>

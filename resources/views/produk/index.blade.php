@@ -29,9 +29,9 @@
                             <th>Harga Beli</th>
                             <th>Harga Jual</th>
                             <th>Stok</th>
-                            <th width="10%">Action</th>
                             <th>Satuan</th>
-                            <th>Foto</th>
+                            <th width="10%">Action</th>
+                            {{-- <th>Foto</th> --}}
                         </thead>
                     </table>
                 </form>

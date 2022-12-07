@@ -16,7 +16,8 @@
                 {data: 'harga_beli'},
                 {data: 'harga_jual'},
                 {data: 'stok'},
-                {data: 'foto'},
+                {data: 'satuan'},
+                // {data: 'foto'},
                 {data: 'aksi', searchable: false, sortable: false},
             ]
         });
@@ -66,7 +67,7 @@
                 $('#modal-form [name=harga_beli]').val(response.harga_beli);
                 $('#modal-form [name=harga_jual]').val(response.harga_jual);
                 $('#modal-form [name=stok]').val(response.stok);
-                $('#modal-form [name=foto]').val(response.foto);
+                // $('#modal-form [name=foto]').val(response.foto);
             })
             .fail((errors) => {
                 alert('Tidak dapat menampilkan data');
