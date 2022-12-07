@@ -31,13 +31,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="merk" class="col-lg-2 col-lg-offset-1 control-label">Merk</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="merk" id="merk" class="form-control">
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="harga_beli" class="col-lg-2 col-lg-offset-1 control-label">Harga Beli</label>
                         <div class="col-lg-6">
                             <input type="number" name="harga_beli" id="harga_beli" class="form-control" required>
@@ -63,6 +56,13 @@
                         <div class="col-lg-6">
                             <input type="number" name="stok" id="stok" class="form-control" required value="0">
                             <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="foto" class="col-lg-2 control-label">Foto</label>
+                        <div class="col-lg-4">
+                            <input type="file" name="foto" class="form-control" id="foto"
+                                onchange="preview('.tampil-foto', this.files[0])">
                         </div>
                     </div>
                     {{-- <div class="form-group row">
