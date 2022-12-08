@@ -46,6 +46,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('laporan.index') }}">
+                        <i class="fa fa-usd"></i> <span>Laba</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('penjualan.index') }}">
                         <i class="fa fa-file-pdf-o"></i> <span>Laporan Penjualan</span>
                     </a>
@@ -79,7 +84,7 @@
                 </li>
                 <li>
                     <a href="{{ route('transaksi.baru') }}">
-                        <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Baru</span>
+                        <i class="fa fa-cart-arrow-down"></i> <span>Transaksi</span>
                     </a>
                 </li>
                 <li>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Laporan Pendapatan {{ tanggal_indonesia($tanggalAwal, false) }} s/d {{ tanggal_indonesia($tanggalAkhir, false) }}
+    Laba {{ tanggal_indonesia($tanggalAwal, false) }} s/d {{ tanggal_indonesia($tanggalAkhir, false) }}
 @endsection
 
 @push('css')
@@ -10,19 +10,19 @@
 
 @section('breadcrumb')
     @parent
-    <li class="active">Laporan</li>
+    <li class="active">Laba</li>
 @endsection
 
 @section('content')
 <div class="row">
     <div class="col-lg-12">
         <div class="box">
-            <div class="box-header with-border">
-                <a onclick="updatePeriode()" style="background-color: #548CFF" class="float-end btn btn-success text-light">Edit Data</a>
-                <a onclick="{{ route('laporan.export_pdf', [$tanggalAwal, $tanggalAkhir]) }}" target="_blank" style="background-color: #3CCF4E" class="float-end btn btn-success text-light">Delete</a>
+            <div class="box-footer text-right">
+                <button onclick="updatePeriode()" class="btn btn-outline-danger mb-3"><i class="fa fa-filter"></i> Filter</button>
+                <a href="{{ route('laporan.export', [$tanggalAwal, $tanggalAkhir]) }}" target="_blank" class="btn btn-outline-danger mb-3"><i class="fa fa-file-pdf-o"></i> Cetak Laporan</a>
             </div>
             <div class="box-body table-responsive">
-                <table class="table table-stiped table-bordered">
+                <table class="table table-stiped table-bordered ">
                     <thead>
                         <th width="5%">No</th>
                         <th>Tanggal</th>

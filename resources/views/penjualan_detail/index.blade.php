@@ -40,7 +40,7 @@
                         <th>Harga</th>
                         <th width="15%">Jumlah</th>
                         <th>Subtotal</th>
-                        <th width="15%"><i class="fa fa-cog"></i></th>
+                        <th width="15%">Action</th>
                     </thead>
                 </table>
 
@@ -121,7 +121,7 @@
                 {data: 'nama_produk'},
                 {data: 'harga_jual'},
                 {data: 'jumlah'},
-                {data: 'diskon'},
+                // {data: 'diskon'},
                 {data: 'subtotal'},
                 {data: 'aksi', searchable: false, sortable: false},
             ],

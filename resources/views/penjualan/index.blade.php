@@ -13,6 +13,9 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="box">
+            {{-- <div class="box-header with-border">
+                <a onclick="{{ route('penjualan.export_pdf', [$tanggalAwal, $tanggalAkhir]) }}" target="_blank" style="background-color: #3CCF4E" class="float-end btn btn-success text-light">Cetak Laporan</a>
+            </div> --}}
             <div class="box-body table-responsive">
                 <table class="table table-stiped table-bordered table-penjualan">
                     <thead>
