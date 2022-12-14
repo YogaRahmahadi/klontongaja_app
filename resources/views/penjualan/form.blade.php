@@ -1,11 +1,11 @@
-<div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form">
+<div class="modal fade" id="modal-form1" tabindex="-1" role="dialog" aria-labelledby="modal-form">
     <div class="modal-dialog modal-lg" role="document">
-        <form action="{{ route('laporan.index') }}" method="get" data-toggle="validator" class="form-horizontal">
+        <form action="{{ route('penjualan.index') }}" method="get" data-toggle="validator" class="form-horizontal">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Fitur</h4>
+                    <h4 class="modal-title">Filter</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group row">
