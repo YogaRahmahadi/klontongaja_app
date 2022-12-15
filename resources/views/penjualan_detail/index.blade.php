@@ -136,14 +136,15 @@
         $(document).on('input', '.quantity', function () {
             let id = $(this).data('id');
             let jumlah = parseInt($(this).val());
+            let stock = $produk[stock];
 
             if (jumlah < 1) {
                 $(this).val(1);
                 alert('Jumlah tidak boleh kurang dari 1');
                 return;
             }
-            if (jumlah > 15) {
-                $(this).val(15);
+            if (jumlah > stock) {
+                $(this).val(stock);
                 alert('Jumlah tidak boleh lebih dari Stock');
                 return;
             }
