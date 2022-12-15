@@ -15,11 +15,11 @@
                         <i class="fa fa-user"></i> <span>Profil</span>
                     </a>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="{{ route('user.index') }}">
                         <i class="fa fa-users"></i> <span>User</span>
                     </a>
-                </li> --}}
+                </li>
                 <li>
                     <a href="{{ route('kategori.index') }}">
                         <i class="fa fa-th-large"></i> <span>Kategori</span>

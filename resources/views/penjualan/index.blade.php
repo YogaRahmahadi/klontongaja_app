@@ -14,7 +14,7 @@
     <div class="col-lg-12">
         <div class="box">
             {{-- <div class="box-header with-border">
-                <a onclick="{{ route('penjualan.export_pdf', [$tanggalAwal, $tanggalAkhir]) }}" target="_blank" style="background-color: #3CCF4E" class="float-end btn btn-success text-light">Cetak Laporan</a>
+                <button onclick="updatePeriode()" class="btn btn-outline-danger mb-3"><i class="fa fa-filter"></i> Filter</button>
             </div> --}}
             <div class="box-body table-responsive">
                 <table class="table table-stiped table-bordered table-penjualan">
@@ -55,7 +55,12 @@
                 {data: 'bayar'},
                 {data: 'kasir'},
                 {data: 'aksi', searchable: false, sortable: false},
-            ]
+            ],
+            dom: 'Brt',
+            bSort: false,
+            bPaginate: false,
+
+            
         });
 
         table1 = $('.table-detail').DataTable({
@@ -71,6 +76,10 @@
                 {data: 'subtotal'},
             ]
         })
+        $('.datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
     });
 
     function showDetail(url) {
@@ -94,6 +103,9 @@
                     return;
                 });
         }
+    }
+    function updatePeriode() {
+        $('#modal-form1').modal('show');
     }
 </script>
 @endpush

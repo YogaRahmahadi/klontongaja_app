@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Laba {{ tanggal_indonesia($tanggalAwal, false) }} s/d {{ tanggal_indonesia($tanggalAkhir, false) }}
+    Laba
 @endsection
 
 @push('css')
