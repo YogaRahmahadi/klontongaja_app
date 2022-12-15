@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Penjualan;
-use App\Models\PenjualanDetail;
+use PDF;
 use App\Models\Produk;
 use App\Models\Setting;
+use App\Models\Penjualan;
 use Illuminate\Http\Request;
-use PDF;
+use App\Models\PenjualanDetail;
+use Illuminate\Routing\Controller;
 
 class PenjualanController extends Controller
 {

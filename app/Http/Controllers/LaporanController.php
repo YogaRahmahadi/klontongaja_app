@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pembelian;
-use App\Models\Pengeluaran;
-use App\Models\Penjualan;
-use Illuminate\Http\Request;
 use PDF;
+use App\Models\Pembelian;
+use App\Models\Penjualan;
+use App\Models\Pengeluaran;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class LaporanController extends Controller
 {
@@ -76,8 +77,9 @@ class LaporanController extends Controller
     public function exportPDF($awal, $akhir)
     {
         $data = $this->getData($awal, $akhir);
-        $pdf  = PDF::loadView('laporan.pdf', compact('awal', 'akhir', 'data'));
+        $pdf  = PDF::loadview('laporan.pdf', compact('awal', 'akhir', 'data'));
         $pdf->setPaper('a4', 'potrait');
+        // return $pdf->download('laporan-laba-pdf');
 
         return $pdf->stream('Laba' . '.pdf');
     }

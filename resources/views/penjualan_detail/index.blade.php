@@ -14,7 +14,7 @@
     <div class="col-lg-12">
         <div class="box">
             <div class="box-body">
-                    
+
                 <form class="form-produk">
                     @csrf
                     <div class="form-group row">
@@ -63,8 +63,8 @@
                             <div class="form-group row">
                                 <label for="diskon" class="col-lg-2 control-label">Diskon</label>
                                 <div class="col-lg-8">
-                                    <input type="number" name="diskon" id="diskon" class="form-control" 
-                                        value="{{ ! empty($memberSelected->id_member) ? $diskon : 0 }}" 
+                                    <input type="number" name="diskon" id="diskon" class="form-control"
+                                        value="{{ ! empty($memberSelected->id_member) ? $diskon : 0 }}"
                                         readonly>
                                 </div>
                             </div>
